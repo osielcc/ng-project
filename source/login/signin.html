@@ -1,0 +1,36 @@
+<div flex layout="column" ng-controller="CoreCtrl">
+	<md-content layout="column" flex="flex">
+		<div layout="column" flex id="content" role="main">
+			<md-content layout="vertical" flex id="content">
+				<div layout="row" layout-align="center center" layout-fill>
+					<md-whiteframe class="md-whiteframe-z2" layout="column" layout-padding flex-xs="90" flex-sm="80" flex="35">
+						<md-content>
+							<div layout="row">
+								<md-progress-linear md-mode="indeterminate" ng-disabled="!loading"></md-progress-linear>
+							</div>
+							<md-input-container class="md-block">
+								<label>Email</label>
+								<input ng-model="user.email">
+							</md-input-container>
+							<md-input-container class="md-block">
+								<label>Password</label>
+								<input ng-model="user.password" type="password">
+							</md-input-container>
+							<div layout="row">
+								<a href="" class="text-90">Olvide mi contraseña</a>
+							</div>
+							<div layout="row">
+								<p class="md-warn p-error" ng-show="msgs">{{msgs}}</p>
+							</div>
+							<div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+								<md-input-container class="md-block no-margin">
+									<md-button ng-click="signin()" class="md-raised md-primary">Iniciar Sesión</md-button>
+								</md-input-container>
+							</div>
+						</md-content>
+					</md-whiteframe>
+				</div>
+			</md-content>
+		</div>
+	</md-content>
+</div>

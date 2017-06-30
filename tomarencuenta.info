@@ -1,0 +1,14 @@
+#https://github.com/iamisti/mdDataTable/issues/268
+changing line 1380 worked for me:
+element.append(val);
+to
+element[0].append(val);
+
+#verificar md-datetimepicker que los bower esten correctos
+
+"main": [
+		"dist/js/mdDateTimePicker.js",
+		"dist/css/mdDateTimePicker.css",
+		"dist/js/mdDateTimePicker.min.js",
+		"dist/css/mdDateTimePicker.min.css"
+	]

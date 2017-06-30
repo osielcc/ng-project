@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tracker">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/bundle.css" type="text/css">
+	<link rel="stylesheet" href="css/app.css" type="text/css">
+	<link rel="stylesheet" href="css/leaflet.draw.css" type="text/css">
+	<link rel="manifest" href="/manifest.json">
+	<title>EyeTracker</title>
+</head>
+<body layout="row" flex ng-controller="CoreCtrl">
+	<div ng-if="!$parent.access" ng-view flex layout="column">
+	</div>
+	<div ng-if="$parent.access" flex layout="column" style="display:none;" ng-style="(cargado)?{'display':'block'}:{'display':'none'}">
+		<div flex layout="column" style="height: 100%;">
+			<md-toolbar layout="row">
+				<div class="md-toolbar-tools">
+					<div layout="row" flex="" class="fill-height layout-row flex">
+						<md-button ng-click="toggle('left')" aria-label="Toggle Menu" style="color: rgba(255,255,255,0.87);" class="btn-single"><i class="material-icons">menu</i></md-button>
+						<h2 class="md-toolbar-item md-breadcrumb md-headline">EyeTracker</h2>
+						<span flex></span>
+						<md-button ng-click="config()" class="btn-single">
+							<i class="material-icons">settings</i>
+						</md-button>
+						<md-button ng-click="logout();" class="btn-single">Cerrar Sesión</md-button>
+					</div>
+				</div>
+			</md-toolbar>
+			<md-sidenav md-component-id="left" style="width: 250px;" class="md-sidenav-left md-whiteframe-z2">
+				<md-content>
+					<md-list ng-cloak>
+						<md-subheader class="md-no-sticky">Secciones</md-subheader>
+						<md-list-item>
+							<p>
+								<a href="#!/dashboard">Mapa</a>
+							</p>
+						</md-list-item>
+						<md-list-item>
+							<p>
+								<a href="#!/reglas">Reglas</a>
+							</p>
+						</md-list-item>
+						<md-list-item>
+							<p>
+								<a href="#!/unidades">Unidades</a>
+							</p>
+						</md-list-item>
+						<md-list-item>
+							<p>
+								<a href="#!/modelos">Modelos</a>
+							</p>
+						</md-list-item>
+						<md-list-item>
+							<p>
+								<a href="#!/instrucciones">Instrucciones</a>
+							</p>
+						</md-list-item>
+						<!--<md-list-item>
+							<p>
+								<a href="#">Usuarios</a>
+							</p>
+						</md-list-item>-->
+						<md-list-item has-permission="Detalle Empresa">
+							<p>
+								<a href="#!/empresa">Empresa</a>
+							</p>
+						</md-list-item>
+						<md-list-item has-permission="Alta Empresa">
+							<p>
+								<a href="#!/empresas">Empresas</a>
+							</p>
+						</md-list-item>
+					</md-list>
+				</md-content>
+			</md-sidenav>
+			<md-content layout="column" flex ng-view class="md-padding" style="background-color: #ddd;">
+
+			</md-content>
+		</div>
+	</div>
+</body>
+<script src="js/vendor.js"></script>
+<script src="js/app.js"></script>
+</html>

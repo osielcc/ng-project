@@ -1,0 +1,264 @@
+.no-margin{
+	margin:0;
+}
+.m-v-10{
+	margin: 10px 0;
+}
+.m-tp-20{
+	margin-top: 20px;
+}
+.m-tp-30{
+	margin-top: 30px;
+}
+.text-center{
+	text-align: center;
+}
+.text-90{
+	font-size: 0.9rem;
+}
+.text-300{
+	font-size: 3rem;
+}
+.text-400{
+	font-size: 4rem;
+}
+.m-15{
+	margin: 15px;
+}
+.p-5{
+	padding: 5px;
+}
+.p-10{
+	padding: 10px;
+}
+.t-r{
+	text-align: right;
+}
+a{
+	text-decoration: none;
+	color:#2196F3;
+}
+.vehiculo-ok{
+	background: #e9ffd2;
+	margin-bottom: 1px;
+}
+.vehiculo-warning{
+	background: #ffffbf;
+	margin-bottom: 1px;
+}
+.vehiculo-error{
+	background: #ffbfbf;
+	margin-bottom: 1px;
+}
+.vehiculo-disabled{
+	background: #dddddd;
+	margin-bottom: 1px;
+}
+.btn-single{
+	min-width: initial;
+}
+.btn-single>i{
+	vertical-align: middle;
+}
+.w-100{
+	width: 100%;
+}
+.h-100{
+	height: 100%;
+}
+/*Bitacora*/
+.bitacora-info{
+	background: #0d508e;
+	color: white;
+}
+.bitacora-info-etiqueta{
+	font-weight: 400;
+	font-size: 1.1rem;
+	margin: 0;
+	padding-top: 10px;
+}
+.bitacora-info-etiqueta-velocidad{
+	margin: 5px 0 25px;
+	font-size: 0.8rem;
+	line-height: 1.4rem;
+}
+.bitacora-info-etiqueta-telefono{
+	font-weight: 100;
+	font-size: 0.8rem;
+}
+.bitacora-dias{
+	font-size: 0.95rem;
+	vertical-align: middle;
+	display: block;
+	margin-top: 10px;
+	padding: 0 8px;
+	opacity: 0.7;
+}
+.bitacora-fecha{
+	font-size: 1.1rem;
+	font-weight: 400;
+}
+.bitacora-datos{
+	font-size: 0.9rem;
+	margin: 0;
+	opacity: 0.7;
+}
+.bitacora-lugar{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+.bitacora-lugar-container{
+	padding: 0 0 1.8rem 0;
+}
+.bitacora-lugar-linea{
+	background: #095498;
+	width: 8px;
+	margin: 0 15px 0 0;
+}
+.bitacora-lugar-linea img{
+	margin-left: -8px;
+	margin-top: -6px;
+}
+.bitacora-lugar:last-child{
+	margin-bottom: 1rem;
+}
+.bitacora-lugar:last-child .bitacora-lugar-linea{
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-align-content: center;
+	align-content: center;
+	max-width: 100%;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+}
+.bitacora-lugar:last-child .bitacora-lugar-linea img{
+	margin-left: 0px;
+	margin-bottom: -5px;
+}
+.bitacora-lugar-descripcion{
+	font-size: 0.9rem;
+	font-weight: 500;
+	margin: 0 0 0.1rem;
+}
+.bitacora-lugar-direccion{
+	font-size: 0.8rem;
+	margin: 0;
+}
+.bitacora-lugar-hora{
+	font-size: 0.7rem;
+	text-align: right;
+	opacity: 0.7;
+	margin: 0;
+	padding-right: 0.7rem;
+}
+.bitacora-lugar-velocidad{
+	opacity: 0.7;
+	font-size: 0.8rem;
+	font-weight: 100;
+}
+.error-message{
+	color: #F44336;
+	font-size: 0.8rem;
+	display: inline-block;
+	margin: 10px 2px;
+}
+.p-error{
+	opacity: 0.8;
+	font-size: 0.9rem;
+	color: white;
+	background: #F50057;
+	padding: 8px;
+	width: 100%;
+	border-radius: 2px;
+}
+
+/*MODIFICANDO ANGULAR MATERIAL*/
+.md-errors-spacer{
+	display: none;
+}
+
+.css-icon {
+
+}
+
+.gps_ring {
+	border: 3px solid #999;
+	-webkit-border-radius: 30px;
+	height: 18px;
+	width: 18px;
+	-webkit-animation: pulsate 1s ease-out;
+	-webkit-animation-iteration-count: infinite;
+	/*opacity: 0.0*/
+}
+md-whiteframe{
+	background: white;
+}
+
+.md-fab>i{
+	vertical-align: middle;
+}
+
+.dialog-full{
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+.demo-md-panel {
+	min-height: 500px;
+}
+
+.demo-dialog-example {
+	background: white;
+	border-radius: 4px;
+	box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2),
+	0 13px 19px 2px rgba(0, 0, 0, 0.14),
+	0 5px 24px 4px rgba(0, 0, 0, 0.12);
+	width: 500px;
+}
+
+.demo-dialog-content {
+	padding: 0 15px;
+	width: 100%;
+}
+
+.demo-dialog-content img {
+	height: 300px;
+	margin: auto;
+}
+
+.demo-dialog-button {
+	width: 100%;
+}
+
+.demo-dialog-custom-animation-open {
+	opacity: 1;
+	transition: all 1s linear, opacity 1ms;
+	transform: rotate(390deg);
+}
+
+.demo-dialog-custom-animation-close {
+	opacity: 0;
+	transition: all 1s linear, opacity 1ms;
+	transform: rotate(0deg);
+}
+
+md-radio-button.inline{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.md-timepicker-label{
+	display: inline-block;
+	vertical-align: middle;
+	border-bottom: 1px solid #c1c1c1;
+	padding: 8px 20px 8px 8px;
+}
+
+@-webkit-keyframes pulsate {
+	0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+	50% {opacity: 1.0;}
+	100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
