@@ -13,6 +13,9 @@
 .text-center{
 	text-align: center;
 }
+.text-right{
+	text-align: right;
+}
 .text-90{
 	font-size: 0.9rem;
 }
@@ -261,4 +264,92 @@ md-radio-button.inline{
 	0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
 	50% {opacity: 1.0;}
 	100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+.md-fab-fixed{
+	position: fixed;
+	right: 36px;
+	bottom: 36px;
+}
+
+.mdt-footer>.mdt-pagination button:last-child {
+	margin-right: 72px !important;
+}
+
+.icon-click{
+	cursor: pointer;
+	outline: none;
+}
+
+.mdtTableContainer.md-whiteframe-z1{
+	box-shadow: none;
+}
+md-sync-autocomplete md-autocomplete-wrap{
+	box-shadow: none !important;
+}
+
+md-sync-autocomplete md-autocomplete-wrap>input{
+	-webkit-box-ordinal-group: initial !important;
+	order: initial !important;
+}
+
+.asset-upload{
+	cursor: pointer;
+	width: initial;
+	padding: 20px;
+	text-align: center;
+	border: 5px dashed rgb(126,151,186);
+}
+.asset-upload.over{
+	opacity: 0.4;
+}
+.asset-upload>p{
+	 font-size: 20px;
+	 margin: 0.5rem;
+	 font-weight: 600;
+	 color: rgb(126,151,186);
+ }
+.asset-upload-add{
+	background: transparent;
+	border: 5px dashed rgb(126,151,186);
+	width: 100px;
+	height: 100px;
+	color: rgb(126,151,186);
+}
+
+.asset-upload-add>i{
+	font-size: 48px;
+	vertical-align: middle;
+}
+
+.preview-thumbnail{
+	position: relative;
+}
+
+.preview-thumbnail-image{
+	width: 100px;
+	height: 100px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 200%;
+	margin: 5px;
+}
+.preview-thumbnail-button{
+	display: none;
+}
+.preview-thumbnail:hover .preview-thumbnail-button{
+	display: block;
+}
+
+.preview-thumbnail-button{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: auto 0;
+	max-width: initial;
+	color: white;
+	background-color: rgba(62, 62, 62, 0.36) !important;;
+	min-width: 100%;
 }
