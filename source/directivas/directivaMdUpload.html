@@ -1,0 +1,9 @@
+<div>
+	<div class="asset-upload" ng-click="activeFiles()" ng-show="showDragDrop" ng-class="(enter || over)?'over':''">
+		<p>Arrastra las fotos aquí</p>
+		<input type="file" multiple="true" id="uploadFiles" style="display: none;">
+	</div>
+	<button ng-click="activeFiles()" ng-show="!showDragDrop" class="asset-upload-add">
+		<i class="material-icons">add</i>
+	</button>
+</div>

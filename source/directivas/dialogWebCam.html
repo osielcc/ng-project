@@ -1,0 +1,19 @@
+<md-dialog style="width:672px; max-height: initial;">
+	<md-toolbar>
+		<div class="md-toolbar-tools">
+			<h2>Camara</h2><span flex=""></span>
+			<md-button ng-click="detenerCamara();hide()" class="md-icon-button"><i class="material-icons">close</i></md-button>
+		</div>
+	</md-toolbar>
+	<md-dialog-content class="md-padding">
+		<div layout="column">
+			<video id="video" width="640" height="480" autoplay="autoplay" ng-show="!picture"></video>
+			<canvas id="canvas" width="640" height="480" ng-show="picture"></canvas>
+			<span ng-init="initCam();"></span>
+		</div>
+	</md-dialog-content>
+	<md-dialog-actions layout="row">
+		<md-button ng-click="detenerCamara();hide();" class="md-primary">Cerrar</md-button>
+		<md-button id="photo" class="md-raised md-primary" ng-click="hide();">Tomar</md-button>
+	</md-dialog-actions>
+</md-dialog>

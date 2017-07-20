@@ -1,0 +1,29 @@
+<md-dialog aria-label="Mango (Fruit)" style="width: 500px" md-theme="red">
+	<form ng-cloak>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h2>Errores</h2>
+				<span flex></span>
+				<md-button class="md-icon-button" ng-click="cancel()">
+					<md-icon>
+						<i class="material-icons">clear</i>
+					</md-icon>
+				</md-button>
+			</div>
+		</md-toolbar>
+		<md-dialog-content>
+			<div class="md-dialog-content">
+				<md-list flex ng-repeat="(key,valuemsg) in msgs">
+					<md-subheader class="md-no-sticky">{{key}}</md-subheader>
+					<md-list-item ng-repeat="m in valuemsg">
+						<p>{{m}}</p>
+					</md-list-item>
+					<md-divider ></md-divider>
+				</md-list>
+			</div>
+		</md-dialog-content>
+		<md-dialog-actions layout="row">
+			<md-button class="" ng-click="cancel()">Cerrar</md-button>
+		</md-dialog-actions>
+	</form>
+</md-dialog>
