@@ -33,3 +33,18 @@ function transformArray(name,array){
 	});
 	return newDataAdd;
 }
+
+function clearAutocomplete(data,objects){
+	objects.map(function(obj){
+		data[obj+"_id"]=data[obj].id;
+		delete(data[obj]);
+	});
+	return data;
+}
+
+function clearSwitch(data,objects){
+	objects.map(function(obj){
+		data[obj]=(data[obj])?"1":"0";
+	});
+	return data;
+}
