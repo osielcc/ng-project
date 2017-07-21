@@ -21,7 +21,7 @@ app.directive('mdTimePicker', function() {
 
 			toggleButton.addEventListener('onOk', function() {
 				var value = dialog.time.toString();
-				scope.modelo=dialog.time.format("HH:mm:s");
+				scope.modelo=dialog.time;//.format("HH:mm");
 				safeApply(scope);
 			});
 		}

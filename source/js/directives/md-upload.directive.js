@@ -3,21 +3,21 @@ app.directive('mdUpload', function ($http, $Auth, $q) {
 		restrict: 'E',
 		replace: true,
 		scope: {
-			ngModel: "="
+			ngModel:"="
 		},
 		require: '?ngModel',
 		templateUrl: 'directivas/directivaMdUpload.html',
 		link: function (scope, element, attrs, ngModel) {
-			scope.showDragDrop = true;
+			scope.showDragDrop=true;
 
-			scope.showDragDropFn = function () {
-				if (scope.ngModel.length == 0) {
-					scope.showDragDrop = true;
-				} else {
-					if (scope.over || scope.enter) {
-						scope.showDragDrop = true;
-					} else {
-						scope.showDragDrop = false;
+			scope.showDragDropFn=function(){
+				if(scope.ngModel.length==0){
+					scope.showDragDrop=true;
+				}else{
+					if(scope.over || scope.enter){
+						scope.showDragDrop=true;
+					}else{
+						scope.showDragDrop=false;
 					}
 				}
 			}
@@ -26,8 +26,8 @@ app.directive('mdUpload', function ($http, $Auth, $q) {
 			element.on('dragover', function (e) {
 				e.preventDefault();
 				e.stopPropagation();
-				scope.over = true;
-				scope.leave = false;
+				scope.over=true;
+				scope.leave=false;
 				scope.showDragDropFn();
 				//safeApply(scope);
 			});
@@ -35,24 +35,24 @@ app.directive('mdUpload', function ($http, $Auth, $q) {
 			element.on('dragenter', function (e) {
 				e.preventDefault();
 				e.stopPropagation();
-				scope.enter = true;
-				scope.leave = false;
+				scope.enter=true;
+				scope.leave=false;
 				scope.showDragDropFn();
 				//safeApply(scope);
 			});
 
 			element.on('dragleave', function (e) {
-				scope.leave = true;
-				scope.over = false;
-				scope.enter = false;
+				scope.leave=true;
+				scope.over=false;
+				scope.enter=false;
 				scope.showDragDropFn();
 				//safeApply(scope);
 			});
 
 			element.on('drop', function (e) {
-				scope.drop = true;
-				scope.over = false;
-				scope.enter = false;
+				scope.drop=true;
+				scope.over=false;
+				scope.enter=false;
 				//safeApply(scope);
 				e.preventDefault();
 				e.stopPropagation();
@@ -64,17 +64,17 @@ app.directive('mdUpload', function ($http, $Auth, $q) {
 				return false;
 			});
 
-			scope.activeFiles = function () {
+			scope.activeFiles=function(){
 				$("#uploadFiles").trigger('click');
 
 			};
-			$(document).on("change", "#uploadFiles", function () {
-				if (this.files.length > 0) {
+			$(document).on("change","#uploadFiles",function(){
+				if(this.files.length>0){
 					transformFiles(this.files);
 				}
 			});
 
-			function transformFiles(files) {
+			function transformFiles(files){
 				angular.forEach(files, function (value) {
 					var altaPromise = alta(value);
 					altaPromise.then(function (r) {
@@ -94,24 +94,22 @@ app.directive('mdUpload', function ($http, $Auth, $q) {
 			}
 
 			function requestAPI() {
-				var data = {
-					id: "4",
-					empresa_id: 2
-				};
-				var ArrayImg=["base64","bas64"];
-				var files = transformArray("files", ArrayImg);
-				$.extend(true, data, files);
-				$http({
-					method: 'POST',
-					url: attrs.to,
-					data: data,
-					headers: $Auth.headers(),
-					transformRequest: transformRequest
-				}).then(function () {
-					console.log("Uploaded");
-				}).catch(function () {
-					console.log("Error");
-				});
+				/*var data = {
+				 id: "4"
+				 };
+				 var files = transformArray("files", ArrayImg);
+				 $.extend(true, data, files);
+				 $http({
+				 method: 'POST',
+				 url: attrs.to,
+				 data: data,
+				 headers: $Auth.headers(),
+				 transformRequest: transformRequest
+				 }).then(function () {
+				 console.log("Uploaded");
+				 }).catch(function () {
+				 console.log("Error");
+				 });*/
 			}
 		}
 	};
